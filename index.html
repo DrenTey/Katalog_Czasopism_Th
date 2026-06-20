@@ -1,0 +1,300 @@
+
+<html>
+    <head>
+        <title>Czasopisma - wykaz</title>
+	<meta charset="utf-8" />
+    <script src="onl1.js"></script>
+    <script src="Faza2d_script.js"></script>
+        <style>
+
+body {background-color: powderblue;}
+.genJour {
+    position: sticky;
+    top:0px;
+    margin:0;
+    padding:5px;
+    background-color: whitesmoke;
+    font-family:Garamond;
+    font-size:larger;
+}
+.jvolum {
+    font-size:smaller;
+}
+
+h1   {color: black;
+font-family:Papyrus, Garamont;
+text-align: center;}
+.JournalIssue {
+    display: none;
+}
+a {
+    color:black;
+
+}
+table {
+    border-collapse: collapse;
+    border: 2px solid brown;
+    padding: 10px;
+    text-align: center;
+}
+
+tr:hover {background-color: coral;}
+td:first-child {
+    font-weight: bold;
+}
+td:nth-child(even) {
+    background-color: aliceblue;
+}
+td:nth-child(odd) {
+    background-color: rgb(212, 234, 252);
+}
+/*tr:nth-child(even) {background-color: #f2f2f2;} */
+.JournalIssue td div div {
+    color: black;
+}
+.grContainer {display:flex; 
+ background-color: DodgerBlue;
+flex-wrap: wrap;}
+.grContainer div {
+  background-color: white;
+  margin: 5x;
+  padding: 5px;
+  /*
+  padding: 20px;*/
+  font-size: 16px;
+}
+
+.issR {
+    margin: 5px;
+    background-color: #f1f1f1;
+    padding: 5px;
+}
+
+.magazyn {
+    background-color: rgb(244, 244, 178);
+    font-weight: bold;
+
+}
+.biblioteka {
+    background-color: yellow;
+    font-weight: bold;
+}
+.online {
+    background-color: rgb(117, 117, 245);
+    font-weight: bold;
+}
+.magazyn.online {
+    background-color: rgb(168, 253, 168);
+    font-weight: bolder;
+}
+.biblioteka.online {
+    background-color: rgb(80, 248, 80);
+    font-weight: bolder;
+}
+.pierwszy {
+    background-color:black;
+}    
+.naglowki {
+    font-size:larger;
+    font-weight: bolder;
+    font-family:Garamond; 
+    text-align: center;
+ }   
+
+.Tabartykul
+{
+    text-align:left;
+}
+
+.Tabartykul tr td:nth-child(3), .Tabartykul tr td:nth-child(2)
+{
+    font-size:smaller;
+}
+
+/* CSS dla Kagtegorii*/
+.kryterium {
+    padding:5px;
+    font-weight: bolder;
+    display:inline-block;
+}
+.subKategorie span {
+    padding:5px;
+}
+
+</style>
+<script>
+function myFunction() {
+  const elements = document.querySelectorAll(".JournalIssue");
+  elements.forEach(element => {
+    if (element.style.display === "none") {
+    element.style.display = "table-row";
+  } else {
+    element.style.display = "none";
+  }
+  
+});
+}
+function FilterTable2(idTable, id, numerK) {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById(id);
+  filter = input.value.toUpperCase();
+  table = document.getElementById(idTable);
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[numerK];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+
+    </head>
+    <body>
+        <div class="genJour">
+            <div class="genContent">
+                <span><button onclick="myFunction()">Pokaż roczniki</button></span>
+                <button onclick="tabCollection(onl1a, 'demo1')">Dostępne Online</button>
+            </div>
+        </div>
+
+        
+        <p class="naglowki" id="TablicaCzasopism">Tablica Czasopism</p>
+
+        <table border="1" id="TablJournal">
+            <tr>
+                <td>Nazwa</td>
+                <td>Skrót</td>
+                <td>ISSN</td>
+                <td>Pierwszy Rocznik</td>
+                <td>Częstotliwość</td>
+                <td>Ostatni Numer</td>
+                <td>Linki</td>
+                <td>Arianta</td>
+                <td>CCEOL</td>
+                <td>Dyscypliny wg MEIN</td>
+            </tr>
+
+             <tr class="JournalVerse">
+                <td>Colloquia Theologica Ottoniana, [do 2001: Szczecińskie Studia Kościelne] </td>
+                <td></td>
+                <td>ISSN: 1731-0555 </br>
+                     e-ISSN: 2353-2998 </br>
+                     DOI: 10.18276/cto</td>
+                <td>1991, online:2014</td>
+                <td>12 miesięcy, 40 punktów</td>
+                <td>2025</td>
+                <td><a href="https://wnus.usz.edu.pl/cto/pl/issues/" target="_blank">CTO</a><span class="jvolum"> [2013-2025]</span></br>
+                    <a href="https://bazhum.muzhp.pl/journals/530" target="_blank">Bazhum#530</a><span class="jvolum"> [Tylko Cytat do 2008]</span><br>
+                    <a href="https://theo-logos.pl/handle/123456789/19" target="_blank">Th-l#19</a><span class="jvolum"> [2001-2023]</span>
+                </td>
+                <td><a href="https://arianta.pl/#/czasopismo/17450" target="_blank">arianta#17450</a></td>
+                <td><a href="https://www.ceeol.com/search/journal-detail?id=1267" target="_blank">CCEOL#1267</a><span class="jvolum"> [2013-2025]</span></td>
+                <td>filozofia, nauki biblijne, nauki o kulturze i religii, nauki teologiczne, prawo kanoniczne</td>
+            </tr>
+            <tr class="JournalIssue">
+                <td colspan="10">
+                <div class="grContainer">
+             <!-- 199x-->
+                     <div class="issCol">
+                    <span class="issR online">1991</span>
+                    <span class="issR online ">1992</span>
+                    <span class="issR online ">1993</span>
+                    <span class="issR online ">1994</span>
+                    <span class="issR online ">1995</span>
+                    <span class="issR online ">1996</span>
+                    <span class="issR online ">1997</span>
+                    <span class="issR online ">1998</span>
+                    <span class="issR online ">1999</span>
+                    <span class="issR online ">2000</span>
+                    </div>
+                    <!-- 200X-->
+                     <div class="issCol" >
+                    <span class="issR online">2001</span>
+                    <span class="issR online">2002</span>
+                    <span class="issR online">2003</span>
+                    <span class="issR online magazyn">2004</span>
+                    <span class="issR online magazyn">2005</span>
+                    <span class="issR online magazyn">2006</span>
+                    <span class="issR online magazyn">2007</span>
+                    <span class="issR online magazyn">2008</span>
+                    <span class="issR online magazyn">2009</span>
+                    <span class="issR online magazyn">2010</span> 
+                    </div>
+                    <!-- 201X-->
+                     <div class="issCol" >
+                    <span class="issR online magazyn">2011</span>
+                    <span class="issR online magazyn">2012</span>
+                    <span class="issR online magazyn">2013</span>
+                    <span class="issR online biblioteka">2014</span>
+                    <span class="issR online biblioteka">2015</span>
+                    <span class="issR online biblioteka">2016</span>
+                    <span class="issR online biblioteka">2017</span>
+                    <span class="issR online biblioteka">2018</span>
+                    <span class="issR online biblioteka">2019</span>
+                    <span class="issR online ">2020</span> 
+                    </div>
+                     <div class="issCol" >
+                    <span class="issR online ">2021</span>
+                    <span class="issR online ">2022</span>
+                    <span class="issR online ">2023</span>
+                    <span class="issR online">2024</span>
+                    <span class="issR online">2025</span>
+                    <span class="issR">2026</span>
+                    <span class="issR">2027</span>
+                    <span class="issR">2028</span>
+                    <span class="issR">2029</span>
+                    <span class="issR">2030</span> 
+                    </div>
+                </div>
+                </td>
+            </tr>
+
+            </tr>
+            </table>
+
+<p class="naglowki">Tablica Artykułów Dynamiczna</p>
+<input type="text" id="mydInput" onkeyup="FilterTable2('dynamicTable','mydInput', 0)" placeholder="Szukaj Roku..">
+<input type="text" id="mydInput2" onkeyup="FilterTable2('dynamicTable','mydInput2', 1)" placeholder="Szukaj Skrótu Czasopisma">
+<input type="text" id="mydInput3" onkeyup="FilterTable2('dynamicTable','mydInput3', 2)" placeholder="Szukaj Kategorii">
+<input type="text" id="mydInput4" onkeyup="FilterTable2('dynamicTable','mydInput4', 3)" placeholder="Szukaj Autora">
+<input type="text" id="mydInput5" onkeyup="FilterTable2('dynamicTable','mydInput5', 4)" placeholder="Szukaj w Tytule">
+<input type="text" id="mydInput6" onkeyup="FilterTable2('dynamicTable','mydInput6', 6)" placeholder="Szukaj w Kluczu">
+
+<p id="demo1"></p>
+
+<div class="grContainer">
+    <div class="kategorie">(ST) Stary Testament</div>
+    <div class="subKategorie">
+        <span class="kryterium">Pięcioksiąg</span><span>ST_Rdz</span><span>ST_Wj</span><span>ST_Kpł</span><span>ST_Lb</span><span>ST_Pwt</span>
+        <span class="kryterium">Prorocy Wcześniejsi</span><span>ST_Joz</span><span>ST_Sdz</span><span>ST_Sam</span><span>ST_Krl</span>
+        <span class="kryterium">Prorocy Więksi</span><span>ST_Iz</span><span>ST_Jr</span><span>ST_Ez</span><span>ST_Lam</span>
+        <span class="kryterium">Prorocy Mniejsi</span><span>ST_Oz</span><span>ST_Jl</span><span>ST_Am</span><span>ST_Ab</span><span>ST_Jon</span>
+        <span">ST_Mi</span><span>ST_Na</span><span>ST_Ha</span><span>ST_So</span><span>ST_Ag</span><span>ST_Za</span><span>ST_Ml</span>
+        <span class="kryterium">Pisma</span><span>ST_Ps</span><span>ST_Hi</span><span>ST_Prz</span>
+        <span>ST_Koh</span><span>ST_Pnp</span><span>ST_Krn</span><span>ST_Est</span>        <span>ST_Rt</span><span>ST_Dan</span>
+        <span class="kryterium">LXX</span><span>ST_Ba</span><span>ST_Tb</span><span>ST_Jdt</span><span>ST_Syr</span><span>ST_Mdr</span>
+        
+    </div>
+    <div class="kategorie">(NT) Nowy Testament</div>
+    <div class="subKategorie">
+        <span class="kryterium">Ewangelie i Dzieje</span><span>NT_Mt</span><span>NT_Mk</span><span>NT_Łk</span><span>NT_J</span><span>NT_Dz</span>
+        <span class="kryterium">Listy Pawłowe i Hbr</span><span>NT_Rz</span><span>NT_1Kor</span><span>NT_2Kor</span><span>NT_Ga</span>
+        <span>NT_Ef</span><span>NT_Flp</span><span>NT_Kol</span><span>NT_1Tes</span>
+        <span>NT_2Tes</span><span>NT_1Tm</span><span>NT_2Tm</span><span>NT_Tt</span><span>NT_Flm</span><span">NT_Hbr</span>
+        <span class="kryterium">Listy Katolickie</span><span>NT_Jk</span><span>NT_1Pt</span><span>NT_2Pt</span>
+        <span>NT_1J</span><span>NT_2J</span><span>NT_3J</span><span>NT_Jud</span>
+        <span class="kryterium">Apokalipsa</span><span>NT_Ap</span>
+    </div>
+</div>
+
+</body>
+</html>
