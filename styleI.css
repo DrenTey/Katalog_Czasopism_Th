@@ -1,0 +1,114 @@
+
+body {background-color: powderblue;}
+.genJour {
+    position: sticky;
+    top:0px;
+    margin:0;
+    padding:5px;
+    background-color: whitesmoke;
+    font-family:Garamond;
+    font-size:larger;
+}
+.jvolum {
+    font-size:smaller;
+}
+
+h1   {color: black;
+font-family:Papyrus, Garamont;
+text-align: center;}
+.JournalIssue {
+    display: none;
+}
+a {
+    color:black;
+
+}
+table {
+    border-collapse: collapse;
+    border: 2px solid brown;
+    padding: 10px;
+    text-align: center;
+}
+
+tr:hover {background-color: coral;}
+td:first-child {
+    font-weight: bold;
+}
+td:nth-child(even) {
+    background-color: aliceblue;
+}
+td:nth-child(odd) {
+    background-color: rgb(212, 234, 252);
+}
+/*tr:nth-child(even) {background-color: #f2f2f2;} */
+.JournalIssue td div div {
+    color: black;
+}
+.grContainer {display:flex; 
+ background-color: DodgerBlue;
+flex-wrap: wrap;}
+.grContainer div {
+  background-color: white;
+  margin: 5x;
+  padding: 5px;
+  /*
+  padding: 20px;*/
+  font-size: 16px;
+}
+
+.issR {
+    margin: 5px;
+    background-color: #f1f1f1;
+    padding: 5px;
+}
+
+.magazyn {
+    background-color: rgb(244, 244, 178);
+    font-weight: bold;
+
+}
+.biblioteka {
+    background-color: yellow;
+    font-weight: bold;
+}
+.online {
+    background-color: rgb(117, 117, 245);
+    font-weight: bold;
+}
+.magazyn.online {
+    background-color: rgb(168, 253, 168);
+    font-weight: bolder;
+}
+.biblioteka.online {
+    background-color: rgb(80, 248, 80);
+    font-weight: bolder;
+}
+.pierwszy {
+    background-color:black;
+}    
+.naglowki {
+    font-size:larger;
+    font-weight: bolder;
+    font-family:Garamond; 
+    text-align: center;
+ }   
+
+.Tabartykul
+{
+    text-align:left;
+}
+
+.Tabartykul tr td:nth-child(3), .Tabartykul tr td:nth-child(2)
+{
+    font-size:smaller;
+}
+
+/* CSS dla Kagtegorii*/
+.kryterium {
+    padding:5px;
+    font-weight: bolder;
+    display:inline-block;
+}
+.subKategorie span {
+    padding:5px;
+}
