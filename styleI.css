@@ -5,7 +5,7 @@ body {background-color: powderblue;}
     top:0px;
     margin:0;
     padding:5px;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
     font-family:Garamond;
     font-size:larger;
 }
@@ -45,10 +45,9 @@ td:nth-child(odd) {
     color: black;
 }
 .grContainer {display:flex; 
- background-color: DodgerBlue;
 flex-wrap: wrap;}
 .grContainer div {
-  background-color: white;
+  /* background-color: white; */
   margin: 5x;
   padding: 5px;
   /*
@@ -111,4 +110,98 @@ flex-wrap: wrap;}
 }
 .subKategorie span {
     padding:5px;
+}
+
+details {
+  border-block-end: 1px solid #000;
+  margin-block: .5rem;
+  padding-block: .5rem;
+}
+
+summary {
+  /* Pin the custom marker to the container */
+  position: relative;
+  /* Register summary as an anchor element */
+  anchor-name: --summary;
+  
+  &::marker {
+    content: "";
+  }
+}
+
+.button-7 {
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-7:hover,
+.button-7:focus {
+  background-color: #07c;
+}
+
+.button-7:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-7:active {
+  background-color: #0064bd;
+  box-shadow: none;
+}
+.dflex {
+    display:flex;
+}
+.dflex div {
+    max-width: 20vw;
+
+}
+/* .dflex > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 auto;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+} */
+
+.dflex > * {
+  border: 1px solid rgb(223, 60, 23);
+  border-collapse: collapse;
+  background-color:  rgb(212, 234, 252);
+  flex: 1 1 auto;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.dName {
+    text-wrap: pretty;
+}
+
+h4 {
+    text-align:center;
+}
+.detA {
+    background-color: powderblue;
 }
