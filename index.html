@@ -11,14 +11,91 @@
     <body>
         <div class="genJour">
             <div class="genContent">
-                <span><button onclick="myFunction()">Pokaż roczniki</button></span>
-                <button onclick="tabCollection(onl1a, 'demo1')">Dostępne Online</button>
+                <span><button class="button-7" onclick="myFunction()">Pokaż roczniki</button></span>
+                <button class="button-7" role="button" onclick="tabCollection(onl1a, 'demo1')">Dostępne Online</button>
             </div>
         </div>
 
         
         <p class="naglowki" id="TablicaCzasopism">Tablica Czasopism</p>
+        <details class="detA" name="journalA">
+            <summary>
+              <div class="dflex">
+                <div class="dName">Colloquia Theologica Ottoniana, [do 2001: Szczecińskie Studia Kościelne]</div>
+                <div class="dShort">CTO</div>
+                <div class="dISSN">ISSN: 1731-0555 </br>
+                     e-ISSN: 2353-2998 </br>
+                     DOI: 10.18276/cto</div>
+                <div class="First">1991, online:2014</div>
+                <div class="Arianta"><a href="https://arianta.pl/#/czasopismo/17450" target="_blank">arianta#17450</a></div>
+              </div>  
+            </summary>
+             <h4>Linki:</h4>
+             <div class="dflex">
+                    <span><a href="https://wnus.usz.edu.pl/cto/pl/issues/" target="_blank">CTO</a><span class="jvolum"> [2013-2025]</span></br></span>
+                    <span><a href="https://bazhum.muzhp.pl/journals/530" target="_blank">Bazhum#530</a><span class="jvolum"> [Tylko Cytat do 2008]</span><br></span>
+                    <span><a href="https://theo-logos.pl/handle/123456789/19" target="_blank">Th-l#19</a><span class="jvolum"> [2001-2023]</span></span>
+                </div>
+                <h4>Dostępne roczniki:</h4>
+                    <div class="grContainer">
+             <!-- 199x-->
+                        <div class="issCol">
+                        <span class="issR online">1991</span>
+                        <span class="issR online ">1992</span>
+                        <span class="issR online ">1993</span>
+                        <span class="issR online ">1994</span>
+                        <span class="issR online ">1995</span>
+                        <span class="issR online ">1996</span>
+                        <span class="issR online ">1997</span>
+                        <span class="issR online ">1998</span>
+                        <span class="issR online ">1999</span>
+                        <span class="issR online ">2000</span>
+                        </div>
+                    <!-- 200X-->
+                        <div class="issCol" >
+                        <span class="issR online">2001</span>
+                        <span class="issR online">2002</span>
+                        <span class="issR online">2003</span>
+                        <span class="issR online magazyn">2004</span>
+                        <span class="issR online magazyn">2005</span>
+                        <span class="issR online magazyn">2006</span>
+                        <span class="issR online magazyn">2007</span>
+                        <span class="issR online magazyn">2008</span>
+                        <span class="issR online magazyn">2009</span>
+                        <span class="issR online magazyn">2010</span> 
+                        </div>
+                    <!-- 201X-->
+                        <div class="issCol" >
+                        <span class="issR online magazyn">2011</span>
+                        <span class="issR online magazyn">2012</span>
+                        <span class="issR online magazyn">2013</span>
+                        <span class="issR online biblioteka">2014</span>
+                        <span class="issR online biblioteka">2015</span>
+                        <span class="issR online biblioteka">2016</span>
+                        <span class="issR online biblioteka">2017</span>
+                        <span class="issR online biblioteka">2018</span>
+                        <span class="issR online biblioteka">2019</span>
+                        <span class="issR online ">2020</span> 
+                        </div>
+                        <div class="issCol" >
+                        <span class="issR online ">2021</span>
+                        <span class="issR online ">2022</span>
+                        <span class="issR online ">2023</span>
+                        <span class="issR online">2024</span>
+                        <span class="issR online">2025</span>
+                        <span class="issR">2026</span>
+                        <span class="issR">2027</span>
+                        <span class="issR">2028</span>
+                        <span class="issR">2029</span>
+                        <span class="issR">2030</span> 
+                        </div>
+                    </div>
+                
 
+        </details>
+        <div>
+
+        </div>
         <table border="1" id="TablJournal">
             <tr>
                 <td>Nazwa</td>
@@ -121,8 +198,7 @@
 
 <p id="demo1"></p>
 
-<div class="grContainer">
-    <details>
+    <details name="skroty">
         <summary><div class="kategorie">(ST) Stary Testament</div></summary>
         <div class="subKategorie">
             <span class="kryterium">Pięcioksiąg</span><span>ST_Rdz</span><span>ST_Wj</span><span>ST_Kpł</span><span>ST_Lb</span><span>ST_Pwt</span>
@@ -133,9 +209,9 @@
             <span class="kryterium">Pisma</span><span>ST_Ps</span><span>ST_Hi</span><span>ST_Prz</span>
             <span>ST_Koh</span><span>ST_Pnp</span><span>ST_Krn</span><span>ST_Est</span>        <span>ST_Rt</span><span>ST_Dan</span>
             <span class="kryterium">LXX</span><span>ST_Ba</span><span>ST_Tb</span><span>ST_Jdt</span><span>ST_Syr</span><span>ST_Mdr</span>
-    </details>    
-    </div>
-    <div class="kategorie">(NT) Nowy Testament</div>
+    </details>
+    <details name="skroty">
+    <summary><div class="kategorie">(NT) Nowy Testament</div></summary>
     <div class="subKategorie">
         <span class="kryterium">Ewangelie i Dzieje</span><span>NT_Mt</span><span>NT_Mk</span><span>NT_Łk</span><span>NT_J</span><span>NT_Dz</span>
         <span class="kryterium">Listy Pawłowe i Hbr</span><span>NT_Rz</span><span>NT_1Kor</span><span>NT_2Kor</span><span>NT_Ga</span>
@@ -145,7 +221,8 @@
         <span>NT_1J</span><span>NT_2J</span><span>NT_3J</span><span>NT_Jud</span>
         <span class="kryterium">Apokalipsa</span><span>NT_Ap</span>
     </div>
-</div>
+    
+    </details>
 
 </body>
 </html>
