@@ -5,8 +5,13 @@ function readCollection(collection) {
 }
 const ulAr =`<h2>Collections</h2>`;
 
+function clearCollection(place){
+     document.getElementById(place).innerHTML = "";
+}
 
 function tabCollection(collection, place){
+    
+if (totalArray.length === 0) {
 let idDym = 'dynamicTable'
 let html2 = `<table id=${idDym}>`;
 if(collection[0]["type"] == "article-journal"){
@@ -74,5 +79,10 @@ else {
 }
 html2 += `</table>`;
 document.getElementById(place).innerHTML = html2;
+readCollection(htlm2);
+}
+else {
+    document.getElementById(place).innerHTML = totalArray[0];
+}
 }
 

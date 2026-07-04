@@ -1,5 +1,7 @@
 
-body {background-color: powderblue;}
+body {background-color: powderblue;
+width: 98vw;
+}
 .genJour {
     position: sticky;
     top:0px;
@@ -113,21 +115,14 @@ flex-wrap: wrap;}
 }
 
 details {
-  border-block-end: 1px solid #000;
-  margin-block: .5rem;
-  padding-block: .5rem;
+  /* padding-block: .5rem; */
+  max-width: 100vw;
 }
 
-summary {
-  /* Pin the custom marker to the container */
-  position: relative;
-  /* Register summary as an anchor element */
-  anchor-name: --summary;
-  
-  &::marker {
+summary::marker {
     content: "";
   }
-}
+
 
 .button-7 {
   background-color: #0095ff;
@@ -170,11 +165,12 @@ summary {
 }
 .dflex {
     display:flex;
+    width: 98vw;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0%;
 }
-.dflex div {
-    max-width: 20vw;
 
-}
 /* .dflex > * {
   border: 2px solid rgb(96 139 168);
   border-radius: 5px;
@@ -189,10 +185,9 @@ summary {
   border: 1px solid rgb(223, 60, 23);
   border-collapse: collapse;
   background-color:  rgb(212, 234, 252);
-  flex: 1 1 auto;
+  flex: 1 1 20vw;
   text-align: center;
   justify-content: center;
-  padding: 10px;
 }
 
 .dName {
@@ -201,7 +196,16 @@ summary {
 
 h4 {
     text-align:center;
+    margin: 0;
 }
 .detA {
     background-color: powderblue;
+}
+.searchEngline {
+    margin: auto;
+}
+
+.wrapper {
+    background-color: whitesmoke;
+    border-left: 1px solid red;
 }

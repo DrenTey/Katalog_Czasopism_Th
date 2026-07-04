@@ -11,8 +11,9 @@
     <body>
         <div class="genJour">
             <div class="genContent">
-                <span><button class="button-7" onclick="myFunction()">Pokaż roczniki</button></span>
-                <button class="button-7" role="button" onclick="tabCollection(onl1a, 'demo1')">Dostępne Online</button>
+                
+                <button class="button-7" role="button" onclick="tabCollection(onl1a, 'demo1')">Załaduj Dostępne Online</button>
+                <span><button class="button-7" onclick="clearCollection('demo1')">Pokaż roczniki</button></span>
             </div>
         </div>
 
@@ -30,14 +31,15 @@
                 <div class="Arianta"><a href="https://arianta.pl/#/czasopismo/17450" target="_blank">arianta#17450</a></div>
               </div>  
             </summary>
+            <div class="wrapper">
              <h4>Linki:</h4>
              <div class="dflex">
                     <span><a href="https://wnus.usz.edu.pl/cto/pl/issues/" target="_blank">CTO</a><span class="jvolum"> [2013-2025]</span></br></span>
                     <span><a href="https://bazhum.muzhp.pl/journals/530" target="_blank">Bazhum#530</a><span class="jvolum"> [Tylko Cytat do 2008]</span><br></span>
                     <span><a href="https://theo-logos.pl/handle/123456789/19" target="_blank">Th-l#19</a><span class="jvolum"> [2001-2023]</span></span>
-                </div>
-                <h4>Dostępne roczniki:</h4>
-                    <div class="grContainer">
+            </div>
+            <h4>Dostępne roczniki:</h4>
+            <div class="grContainer">
              <!-- 199x-->
                         <div class="issCol">
                         <span class="issR online">1991</span>
@@ -90,13 +92,41 @@
                         <span class="issR">2030</span> 
                         </div>
                     </div>
-                
-
+               
+        <div> <br>  </div>
+         </div>
         </details>
+        <details class="detA" name="journalA">
+            <summary>
+              <div class="dflex">
+                <div class="dName">Sympozjum</div>
+                <div class="dShort">Symp</div>
+                <div class="dISSN">ISSN: 2543-5442 </br>
+                    e-ISSN: 2544-3283 </br> 
+                    DOI: 10.4467/25443283SYM</div>
+                <div class="First">1997</div>
+                <div class="Arianta"><a href="https://arianta.pl/#/czasopismo/38902" target="_blank">arianta#38902</a><br>
+                                    <a href="https://www.ceeol.com/search/journal-detail?id=1821" target="_blank">CCEOL#1821</a></div>
+              </div>  
+            </summary>
+            <div class="wrapper">
+             <h4>Linki:</h4>
+             <div class="dflex">
+             <span><a href="https://sympozjum.scj.pl/wszystkie_publikacje/1" target="_blank">Sympozjum</a><br></span>
+            <span><a href="https://ejournals.eu/czasopismo/sympozjum">ejournals</a><br></span>
+            <span><a href="https://bazhum.muzhp.pl/journals/862" target="_blank">Bazhum#862</a></span>
+            <span><a href="https://bibliotekanauki.pl/journals/756" target="_blank">BN#756/</a></span>
+            </div>
+            <h4>Dostępne roczniki:</h4>
+            </div>
+            </details>
+
         <div>
 
-        </div>
 
+            
+        </div>
+<div class="searchEngine">
 <p class="naglowki">Tablica Artykułów Dynamiczna</p>
 <input type="text" id="mydInput" onkeyup="FilterTable2('dynamicTable','mydInput', 0)" placeholder="Szukaj Roku..">
 <input type="text" id="mydInput2" onkeyup="FilterTable2('dynamicTable','mydInput2', 1)" placeholder="Szukaj Skrótu Czasopisma">
@@ -104,7 +134,7 @@
 <input type="text" id="mydInput4" onkeyup="FilterTable2('dynamicTable','mydInput4', 3)" placeholder="Szukaj Autora">
 <input type="text" id="mydInput5" onkeyup="FilterTable2('dynamicTable','mydInput5', 4)" placeholder="Szukaj w Tytule">
 <input type="text" id="mydInput6" onkeyup="FilterTable2('dynamicTable','mydInput6', 6)" placeholder="Szukaj w Kluczu">
-
+</div>
 <p id="demo1"></p>
 
     <details name="skroty">

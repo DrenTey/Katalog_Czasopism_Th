@@ -1,14 +1,3 @@
-function myFunction() {
-  const elements = document.querySelectorAll(".JournalIssue");
-  elements.forEach(element => {
-    if (element.style.display === "none") {
-    element.style.display = "table-row";
-  } else {
-    element.style.display = "none";
-  }
-  
-});
-}
 function FilterTable2(idTable, id, numerK) {
   // Declare variables
   var input, filter, table, tr, td, i, txtValue;
